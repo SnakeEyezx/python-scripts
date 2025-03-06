@@ -1,4 +1,9 @@
-
+# roomid = os.environ['MAIL_ROOM_ID'] # '661cceabebdbe25c1ec7a41f'
+# engine_string = os.environ['ENGINE_STRING'] # postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}
+# engine = create_engine(engine_string)
+# Session = sessionmaker(bind=engine)
+# Base = declarative_base()
+# metadata = Base.metadata
 # class Mailbox(Base):
 #     __tablename__ = 'mailbox'
 #     __table_args__ = {'comment': 'Postfix Admin - Virtual Mailboxes'}
