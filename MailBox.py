@@ -104,7 +104,7 @@ class MailMessage:
         name = self.payload['name']
         surname = self.payload['surname']
         self.user_name = translit(f"{name.lower()}.{surname.lower()}", 'ru', reversed=True)
-        self.user_email = f'{self.user_name}@travelata.ru'
+        self.user_email = f'{self.user_name}@domain.com'
         self.mail_dir = f'travelata.ru/{self.user_name}/'
 
     def validate_request(self):
@@ -155,7 +155,7 @@ class MailMessage:
                       created=self.date_time,
                       modified=self.date_time,)
 
-        alias_forward = Alias(address=f'{self.user_name}@travadm.org',
+        alias_forward = Alias(address=f'{self.user_name}@domain.org',
                               goto=self.user_email,
                               domain='travadm.org',
                               created=self.date_time,
